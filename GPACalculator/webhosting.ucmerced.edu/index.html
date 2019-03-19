@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=" "/>
+    <meta name="keywords" content=" "/>
+    <meta name="robots" content="index, follow"/>
+    <title>Academic Advisement Center - GPA Calculator</title><!-- - - LOAD CSS FILES PHP - - -->
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/fonts/typefaces.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/MyStyle_V4.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/MyPageBanners.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/MyFac_Profile.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/MyFooterNavigation.css"
+          type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/MyLayout.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/MyRSSStyle.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/MyGallery.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/SlideShow.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/SlideShow_transitions.css"
+          type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/_accordion.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/_csufclasses.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_site/_MyOverride_Style.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_site/_MyOverride_Layout.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_site/_MyOverride_RSS.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_standard/MyMobileStyle.css" type="text/css"/>
+    <link rel="stylesheet" href="../www.fullerton.edu/aac/_resources/css_site/_MyOverride_Mobile.css" type="text/css"/>
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/touch_57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/touch_60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/touch_72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/touch_76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/touch_114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/touch_120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/touch_144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/touch_152.png"/>
+    <link rel="icon" type="image/pn" sizes="16x16"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/favicon_16.png"/>
+    <link rel="icon" type="image/pn" sizes="32x32"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/favicon_32.png"/>
+    <link rel="icon" type="image/pn" sizes="96x96"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/favicon_96.png"/>
+    <link rel="icon" type="image/pn" sizes="160x160"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/favicon_160.png"/>
+    <link rel="icon" type="image/pn" sizes="196x196"
+          href="http://www.fullerton.edu/aac/_resources/images/icons/favicon/favicon_196.png"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage"
+          content="http://www.fullerton.edu/aac/_resources/images/icons/favicon/mstitle_144.png"/>
+    <script type="text/javascript"
+            src="../www.fullerton.edu/aac/_resources/js_standard/Slideshow_V4.js">//slideshow version 4 code base;
+    </script>
+
+    <script type="text/javascript"
+            src="../www.fullerton.edu/aac/_resources/js_standard/Accordion_V4.js">//accordion version 4 code base;
+    </script>
+    <script type="text/javascript"
+            src="../www.fullerton.edu/aac/_resources/js_standard/ShowGallery.js">//image gallery code base;
+    </script>
+    <script type="text/javascript"
+            src="../www.fullerton.edu/aac/_resources/js_standard/ajax_base.js">//ajax version 4 code base;
+    </script>
+    <script type="text/javascript" src="../www.fullerton.edu/aac/_resources/js_standard/jquery.js">//jquery code base;
+    </script>
+    <script type="text/javascript"
+            src="../www.fullerton.edu/aac/_resources/js_standard/page_features.js">//standard page features;
+    </script>
+    <script type="text/javascript"
+            src="../www.fullerton.edu/aac/_resources/js_site/_ExtraJSFiles.js">//site import js files;
+    </script>
+    <script type="text/javascript"
+            src="../www.fullerton.edu/aac/_resources/js_site/googleanalytics.js">//google analytics code;
+    </script>
+    <script src="https://webhosting.ucmerced.edu/form_validation.js"
+    </script>
+    <
+    script
+    src = "https://webhosting.ucmerced.edu/cardSortFunctions.js" ></script>
+    <script src="https://webhosting.ucmerced.edu/randomInAllPages.js"></script>
+
+</head>
+<body class="InheritValues">
+
+<div id="divAjaxTools">
+    <input type="hidden" id="hdnServerBase" value="http://www.fullerton.edu/aac"/>
+
+</div>
+
+
+<div id="MainContent" role="main">
+    <div class="container">
+        <div id="centercontent" class="Show100Wide"><a id="maincontent"></a>
+            <div id="layoutcontainer" class="T3_39">
+                <div id="divB" class="divB ">
+                    <div class="featureBlock6_univBlue altrow"><h3>Calculate Your Cumulative GPA</h3>
+                        <div style="width: 90%; margin: 0 auto;">
+                            <table id="prev_sems">
+                                <tbody>
+                                <tr>
+                                    <th colspan="2">Enter total units and grade points accumulated up until this
+                                        Semester.
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td id="__autoId8" style="text-align: center;"
+                                        title="ALL units from previous semesters and any other institutions">Total GPA
+                                        Units Attempted
+                                    </td>
+                                    <td id="__autoId12" style="text-align: center;"
+                                        title="ALL grade points from previous semesters and any other institutions">
+                                        Total Grade Points
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: center;"><input id="prevUnits" style="width: 50%;"
+                                                                           name="prevUnits" size="3" type="text"/></td>
+                                    <td style="text-align: center;"><input id="prevGradePoints" maxlength="8"
+                                                                           name="prevGradePoints" size="8" type="text"/>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="divC" class="divC ">
+                    <div class="featureBlock7_orange"><h2>GPA Report</h2>
+                        <p>Total Grade Points</p>
+                        <h1 id="result_total_GradePoints"></h1>
+                        <p>Total # of GPA Units</p>
+                        <h1 id="result_total_units"></h1>
+                        <p>Grade Point Average</p>
+                        <h1 id="result_total_GPA"></h1></div>
+                </div>
+                <div id="divD" class="divD ">
+                    <div class=""></div>
+                </div>
+                <div id="divE" class="divE ">
+                    <div class=""></div>
+                </div>
+                <div id="divF" class="divF ">
+                    <div class=""></div>
+                </div>
+                <div id="divG" class="divG ">
+                    <div class=""></div>
+                </div>
+                <div id="divH" class="divH ">
+                    <div class="featureBlock6_univBlue altrow"><h3>Calculate semester GPA</h3>
+                        <table class="altrow " style="height: 197px;" width="915">
+                            <tbody id="Tbody1">
+                            <tr>
+                                <th id="__autoId13" title="(OPTIONAL) Enter Abreviated Course Title (Acct 215)">Course
+                                    <br/><span>(Optional)</span></th>
+                                <th id="__autoId11" title="Enter Amount of Units Received for Corresponding Course.">#
+                                    of <br/>Units
+                                </th>
+                                <th id="__autoId10"
+                                    title="Enter Letter Grade Received in Corresponding Course (A,A-,etc.)">Letter <br/>Grade
+                                </th>
+                                <th id="__autoId9"
+                                    title="When checked, corresponding grade not figured into cumulative GPA.">Exclude
+                                    from <br/>GPA
+                                </th>
+                                <th>Grade <br/>Points</th>
+                                <th id="__autoId5"
+                                    title="Grade Points are calculated for you based on units and letter grade."></th>
+                            </tr>
+                            </tbody>
+                            <tbody id="myTbody">
+                            <tr>
+                                <td class="optCell">
+                                    <div align="center"><input alt="Course Input" name="course" size="8" type="text"/>
+                                    </div>
+                                </td>
+                                <td class="reqCell">
+                                    <div align="center"><input class="nummber number_units_input" alt="Units Input"
+                                                               name="units" required="" size="5" type="text"/></div>
+                                </td>
+                                <td class="reqCell">
+                                    <div align="center"><input class="grade_input" alt="Grade Input" name="grade"
+                                                               required="" size="5" type="text"/></div>
+                                </td>
+                                <td>
+                                    <div align="center"><input class="exclude_checkbox" alt="Exclude from GPA"
+                                                               name="cnc" size="5" type="checkbox" value="on"/></div>
+                                </td>
+                                <td class="calCell">
+                                    <div align="center">
+                                        <h3 class="gpoints">0.00</h3>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div align="center"><input class="pill gradient resetrow"
+                                                               title="Clears Data Entered in this Row"
+                                                               alt="Reset this row" size="5" type="reset"
+                                                               value="Reset"/></div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="7">
+                                    <div align="center"><input id="addrow_button" class="button univBlue"
+                                                               title="Adds Row for an Extra Course to be Calculated."
+                                                               type="button" value="Add Row"/> <input
+                                            id="removerow_button" class="button univBlue"
+                                            title="Deletes the Last Row from the Calculation Table" type="button"
+                                            value="Remove Row"/> <input id="resetall_button" class="button univBlue"
+                                                                        title="Clears all Entered Data" type="button"
+                                                                        value="Reset All Rows"/></div>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <table summary="TotalGrade" width="100%" cellspacing="4">
+                            <thead>
+                            <tr>
+                                <th id="__autoId15"
+                                    title="Semester Grade Points: ALL grade pts. including current semester.">Grade
+                                    <br/> Points
+                                </th>
+                                <th id="__autoId22" class="divider"
+                                    title="Total Grade Points:  Total for the current semester.">÷
+                                </th>
+                                <th id="__autoId17" title="Semester Total Units: ALL units including current semester.">
+                                    # of <br/> GPA Units
+                                </th>
+                                <th id="__autoId20" class="divider"
+                                    title="GPA: Semester grade pts divided by total units for a semester.">=
+                                </th>
+                                <th title="GPA: Semester Grade Points divided by Semester Units">Grade Point <br/>
+                                    Average
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div align="center">
+                                        <h5 class="sem_grade_points"
+                                            title="Total Grade Points: ALL grade points of current semester."></h5>
+                                    </div>
+                                </td>
+                                <td class="divider" style="text-align: center;">÷</td>
+                                <td>
+                                    <div align="center">
+                                        <h5 class="sem_number_units"
+                                            title="Total Grade Points: ALL grade points of current semester."></h5>
+                                    </div>
+                                </td>
+                                <td class="divider" style="text-align: center;">=</td>
+                                <td>
+                                    <div align="center">
+                                        <h5 class="semGPA"
+                                            title="Total Grade Points: ALL grade points of current semester."></h5>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="divI" class="divI ">
+                    <div class="featureBlock6_univBlue altrow"><h3>Grading System</h3>
+                        <table id="gradeTable" summary="Grades Policy" width="100%" cellpadding="4">
+                            <tbody id="gradebody">
+                            <tr>
+                                <th valign="top">Grades</th>
+                                <th valign="top">Grade<br/> Points</th>
+                                <th valign="top"></th>
+                                <th valign="top">1-Unit Course</th>
+                                <th valign="top">2-Unit Course</th>
+                                <th valign="top">3-Unit Course</th>
+                                <th valign="top">4-Unit Course</th>
+                                <th valign="top">5-Unit Course</th>
+                            </tr>
+                            <tr>
+                                <td valign="top">A+, A</td>
+                                <td valign="top">
+                                    <div align="center">4.0</div>
+                                </td>
+                                <td valign="top">Outstanding</td>
+                                <td valign="top">
+                                    <div align="center">4</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">8</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">12</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">16</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">20</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">A-</td>
+                                <td valign="top">
+                                    <div align="center">3.7</div>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <div align="center">3.7</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">7.4</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">11.1</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">14.8</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">18.5</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">B+</td>
+                                <td valign="top">
+                                    <div align="center">3.3</div>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <div align="center">3.3</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">6.6</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">9.9</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">13.2</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">16.5</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">B</td>
+                                <td valign="top">
+                                    <div align="center">3.0</div>
+                                </td>
+                                <td valign="top">Good</td>
+                                <td valign="top">
+                                    <div align="center">3</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">6</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">9</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">12</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">15</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">B-</td>
+                                <td valign="top">
+                                    <div align="center">2.7</div>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <div align="center">2.7</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">5.4</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">8.1</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">10.8</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">13.5</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">C+</td>
+                                <td valign="top">
+                                    <div align="center">2.3</div>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <div align="center">2.3</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">4.6</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">6.9</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">9.2</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">11.5</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">C</td>
+                                <td valign="top">
+                                    <div align="center">2.0</div>
+                                </td>
+                                <td valign="top">Average</td>
+                                <td valign="top">
+                                    <div align="center">2</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">4</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">6</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">8</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">10</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">C-</td>
+                                <td valign="top">
+                                    <div align="center">1.7</div>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <div align="center">1.7</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">3.4</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">5.1</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">6.8</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">8.5</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">D+</td>
+                                <td valign="top">
+                                    <div align="center">1.3</div>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <div align="center">1.3</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">2.6</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">3.9</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">5.2</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">6.5</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">D</td>
+                                <td valign="top">
+                                    <div align="center">1.0</div>
+                                </td>
+                                <td valign="top">Poor</td>
+                                <td valign="top">
+                                    <div align="center">1</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">2</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">3</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">4</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">5</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">D-</td>
+                                <td valign="top">
+                                    <div align="center">0.7</div>
+                                </td>
+                                <td valign="top"></td>
+                                <td valign="top">
+                                    <div align="center">0.7</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">1.4</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">2.1</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">2.8</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">3.5</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">F</td>
+                                <td valign="top">
+                                    <div align="center">0.0</div>
+                                </td>
+                                <td valign="top">Failing</td>
+                                <td valign="top">
+                                    <div align="center">0.0</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">0.0</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">0.0</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">0.0</div>
+                                </td>
+                                <td valign="top">
+                                    <div align="center">0.0</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="8" valign="top">
+                                    <div align="center">Excluded from GPA Calculations</div>
+                                </th>
+                            </tr>
+                        <tr>
+                                <td valign="top">IP</td>
+                                <td colspan="7" valign="top">In Progress</td>
+                            </tr>
+                            <tr>
+                                <td valign="top">NR</td>
+                                <td colspan="7" valign="top">No Report</td>
+                            </tr>    
+			<tr>
+                                <td valign="top">I</td>
+                                <td colspan="7" valign="top">Incomplete
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">W</td>
+                                <td colspan="7" valign="top">Authorized Withdrawal</td>
+                            </tr>
+                            <tr>
+                                <td valign="top">P, S</td>
+                                <td colspan="7" valign="top">Credit</td>
+                            </tr>
+                            <tr>
+                                <td valign="top">NP, U</td>
+                                <td colspan="7" valign="top">No Credit</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="divJ" class="divJ ">
+                    <div class=""></div>
+                </div>
+                <div id="divK" class="divK ">
+                    <div class=""></div>
+                </div>
+                <div id="divL" class="divL ">
+                    <div class=""></div>
+                </div>
+                <div id="divM" class="divM ">
+                    <div class=""></div>
+                </div>
+                <div id="divN" class="divN ">
+                    <div class=""></div>
+                </div>
+                <div id="divO" class="divO ">
+                    <div class=""></div>
+                </div>
+                <div id="divP" class="divP ">
+                    <div class=""></div>
+                </div>
+                <div id="divQ" class="divQ ">
+                    <div class=""></div>
+                </div>
+                <div id="divR" class="divR ">
+                    <div class=""></div>
+                </div>
+                <div id="divS" class="divS ">
+                    <div class=""></div>
+                </div>
+                <div id="divT" class="divT ">
+                    <div class=""></div>
+                </div>
+                <div id="divU" class="divU ">
+                    <div class=""></div>
+                </div>
+                <div id="divV" class="divV ">
+                    <div class=""></div>
+                </div>
+                <div id="divW" class="divW ">
+                    <div class=""></div>
+                </div>
+                <div id="divX" class="divX ">
+                    <div class=""></div>
+                </div>
+                <div id="divY" class="divY ">
+                    <div class=""></div>
+                </div>
+                <div id="divZ" class="divZ ">
+                    <div class=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function mobilemenu() {
+        if (document.getElementById('mobile_header_menu').className == 'mobileclosed') {
+            document.getElementById('mobile_header_menu').className = 'mobileopen';
+        } else {
+            document.getElementById('mobile_header_menu').className = 'mobileclosed';
+        }
+    }
+
+    function mobileexpand(div) {
+
+        if (document.getElementById(div).className == 'mobileexpand') {
+            document.getElementById(div).className = 'mobilecollapse';
+            document.getElementById(div + "_button").innerHTML = '+';
+        } else {
+            document.getElementById(div).className = 'mobileexpand';
+            document.getElementById(div + "_button").innerHTML = '-';
+        }
+    }
+
+</script>
+
+</body>
+</html>
+

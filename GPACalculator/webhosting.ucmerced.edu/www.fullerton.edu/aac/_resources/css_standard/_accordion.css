@@ -1,0 +1,357 @@
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++                    CSS BASICS DO NOT UPDATE OR CHANGE THIS                          +
++     IF YOU WANT TO OVER RIDE THESE STYLES PLEASE USE THE OVERRIDE FILE TO MAKE IT   +
++     UPDATES TO THESE STYLES WILL BE COPIED OVER THE ENTIRE SECTION                  +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.accordion, .accordion-scroll, .accordion-solo, .accordion-scroll-solo, .accordion-form
+{
+	color:#444;
+	background-color:#fff;
+	padding:1%;
+	padding-left:4%;
+	font-size: 1.1em;
+	line-height:1.3em;
+    cursor: pointer;
+    position: relative;
+    padding:0;
+    border-radius:4px;
+    font-weight:normal;
+    border:solid 1px #d3d3d3 !important;
+    margin-bottom:1%;
+    box-sizing:border-box;
+}
+
+
+
+.accordion h3
+.accordion-scroll h3,
+.accordion-solo h3,
+.accordion-scroll-solo h3,
+.accordion-form h3
+{
+    line-height:1em;
+    padding:.3em;  
+	-webkit-font-smoothing: antialiased !important;
+	margin:.375em 0 .375em 0 !important;
+	font-size:1.125em;
+	color:#111;
+	text-transform:none;
+	font-weight:normal;
+	font-family:'open_sansbold'; 
+	font-weight:800;
+}
+
+.accordion h3:first-child:before,
+.accordion-scroll h3:first-child:before,
+.accordion-solo h3:first-child:before,
+.accordion-scroll-solo h3:first-child:before,
+.accordion-form h3:first-child:before
+{ content:"\00a0 \00a0 \00a0  ";  
+ background-image:url(../images/icons/accordion_arrow_closed.png);
+ background-repeat:no-repeat;
+ color:inherit;
+ opacity:1 !important;
+ 
+}
+
+.accordion-open
+{
+   background-color:#fff !important;
+   color:#444;
+}
+
+.accordion-scroll.accordion-open, 
+.accordion-scroll-solo.accordion-open
+{
+   height:300px;   
+   overflow-y:auto;    
+   transition: all 1s ease;
+}
+
+.accordion-open h3:first-child:before,
+.accordion-open h2:first-child:before
+{
+    content:"\00a0 \00a0 \00a0  ";  
+    background-image:url(../images/icons/accordion_arrow_open.png);
+    background-repeat:no-repeat;
+    color:inherit;
+    transition: all 0.8s ease;
+}
+
+.accordion-open h3, .accordion-open h2
+{
+    border-bottom:solid 1px #ddd !important;    
+}
+
+.accordion-open p, .accordion-open ul, .accordion-open ol, 
+.accordion-open img, .accordion-open span
+{
+   font-weight:100 !important;
+   font-family: 'open_sansregular', Verdana, Arial, sans-serif !important;
+}
+.accordion-open p, .accordion-open ul, .accordion-open ol, .accordion-open div.gallery_container,
+.accordion-open img, .accordion-open fieldset,  .accordion-open form,  .accordion-open blockquote,
+.accordion-open h1, .accordion-open h2, .accordion-open h3, 
+.accordion-open h4, .accordion-open h5, .accordion-open h6,
+.accordion-open input, .accordion-open button, .accordion-open table
+{
+  opacity:1;
+  height:auto;
+  padding: .5em .5em .5em .7em;
+  color:#444;
+  background-color:transparent;
+  position:relative;
+  transition: opacity .6s ease-in;
+}
+
+.accordion-open h1, .accordion-open h2, .accordion-open h3, 
+.accordion-open h4, .accordion-open h5, .accordion-open h6
+{
+    clear:both;
+}
+
+.accordion-open a,  .accordion a
+{
+    background-color:#fff !important;
+    color:#00478e;
+}
+
+.accordion-open .button
+{
+   margin:3px !important;
+   padding:8px !important;
+   font-size:.85em;
+}
+
+.accordion-open div.gallery_container img
+{
+    margin-left:0px !important;
+    margin-right:0px !important;
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+
+.accordion-closed p, .accordion-closed ul, .accordion-closed ol, .accordion-closed hr, .accordion-closed div.gallery_container,
+.accordion-closed img, .accordion-closed fieldset,  .accordion-closed form,  .accordion-closed blockquote,
+.accordion-closed h1, .accordion-closed h2, .accordion-closed h4, .accordion-closed h5, .accordion-closed h6
+.accordion-closed input, .accordion-closed button, .accordion-closed table
+{
+   opacity:0; 
+   margin:0px;
+   padding:0px;
+   height:0px;
+   position:absolute;
+}
+
+.accordion-closed
+{
+   background-color:#efefef !important;
+   color:#212121;
+   border:solid 1px #aaa !important;
+   overflow:hidden;
+   transition: all 2s ease;
+   
+}
+
+.accordion-scroll.accordion-closed,
+.accordion-scroll-solo.accordion-closed
+{
+    height:45px;
+}
+
+
+
+
+.accordion-closed:hover
+{
+    color:#212121;    
+    background: #e2e2e2; /* Old browsers */
+    transition: all 0.5s ease;
+    
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: -moz-linear-gradient(top,  #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* W3C */
+    
+}
+
+/*--------------------------------------------------------------
+ACCORD GROUP: USED FOR ACCORDION GROUP OF MULTIPLE SECTIONS
+--------------------------------------------------------------*/
+.accord-group
+{
+    color:#444;
+	background-color:#fff;
+    cursor: pointer;
+    position: relative;
+    margin-top: 2px;
+    padding:0;
+    border-radius:4px;
+    border:solid 1px #e3e3e3 !important;
+}
+
+.accord-group-open p, .accord-group-open ul, .accord-group-open ol, .accord-group-open img, 
+.accord-group-open h1, .accord-group-open h2, .accord-group-open h3
+{
+  opacity:1;
+}
+
+.accord-group-closed p, .accord-group-closed ul, .accord-group-closed ol, .accord-group-closed img, .accordion-group-closed hr,  
+.accord-group-closed h1, .accord-group-closed h2, .accord-group-closed h3
+{
+   opacity:0;
+   
+}
+
+.accord-group-closed
+{
+    background-color:#f7f7f7;
+    color:#212121;
+    border:solid 1px #dedede;
+    max-height:45px;
+    overflow:hidden;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.accord-group-closed:hover
+{
+    color:#212121;    
+    background: #e2e2e2; /* Old browsers */
+    transition: all 0.5s ease;
+    
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: -moz-linear-gradient(top,  #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* W3C */
+    
+}
+
+.accord-group-closed ~ div:first-child
+{
+    float:left;
+    -webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.accord-group-open ~ div:first-child
+{
+    margin-top:20px;
+    -webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.accord-group-closed div h2:first-child,
+.accord-group-closed div h3:first-child
+{
+    display:block;
+    opacity:1;
+    margin:0px;
+    padding:5px;
+    margin-left:40px;  
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.accord-group-open .plus-me
+{
+    /*--------------------------------------------
+        puts the '-' sign icon in accordion groups
+    ----------------------------------------------*/    
+    position:relative;
+    min-height:16px;
+    width:16px;
+    float:left;
+    margin:1%;
+    margin-top:2px;
+    background-image:url('../images/campuscss/subtract.png');
+}
+
+
+.accord-group-closed .plus-me
+{
+    /*---------------------------------------------
+        puts the '+' sign icon in accordion groups
+    -----------------------------------------------*/
+   position:absolute;
+   top:14px;
+   left:10px;
+    min-height:16px;
+    width:16px;
+    float:left;
+    margin:1%;
+    margin-top:2px;
+    background-image:url('../images/campuscss/add.png');
+}
+
+/*------------------------------------------------------------------
+SLIM - ADDITIONAL STYLE TO MAKE ACCORDIONS SMALLER
+-------------------------------------------------------------------*/
+.slim
+{
+    margin-bottom:5px !important;
+}
+
+.slim h1, .slim h2, .slim h3, .slim h4,
+.slim p, .slim a
+{
+    padding-top:1px;
+    padding-bottom:1px;
+    line-height:normal !important;
+    font-size: 1em;
+    line-height:1em;
+    margin:1px !important;
+}
+
+.slim p, .slim a
+{
+    font-size: .95em;	
+}
+
+.slim p
+{
+    margin-left:15px !important;
+    margin-bottom:5px !important;
+}
+
+.slim
+{    
+    border:solid 1px #ddd !important;
+}
+
+.slim.accordion-closed
+{
+    height:auto !important;
+}
+
+/*----------------------------------------------------
+ACCORDION FORM OVERRIDES
+---------------------------------------------------------*/
+.accordion-form.accordion-open .form_default, .accordion-form.accordion-open .form_default legend
+{
+    background:#fff;
+    color:#222;
+}
+
+.accordion-form.accordion-closed .form_default
+{
+    background:transparent !important;
+    color:#222;
+}
+
+

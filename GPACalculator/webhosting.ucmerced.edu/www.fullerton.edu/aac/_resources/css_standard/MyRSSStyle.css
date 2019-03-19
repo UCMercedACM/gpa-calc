@@ -1,0 +1,480 @@
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++                    CSS BASICS DO NOT UPDATE OR CHANGE THIS                          +
++     IF YOU WANT TO OVER RIDE THESE STYLES PLEASE DO IT AT THE VERY BOTTOM OF THIS   +
++     CHANGES TO THESE STYLES WILL BE COPIED OVER THE ENTIRE SECTION                  +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+.rss1
+{
+   min-height:500px;
+   max-height:1100px;
+   overflow-y:scroll;
+   border:solid 1px #ccc;
+   margin: 1%;
+   padding:1%;
+}
+
+.rss1 ul,.rss1 li
+{
+    list-style-type:none !important;
+    margin-left:0px !important;
+}
+
+.rss1 h2
+{
+    font-size:1.1em;
+    text-transform:none;
+    margin-bottom:15px !important;
+    border-bottom:solid 2px #ccc;
+}
+
+.rss1 .RSS_item h3
+{
+    font-size:.95em;
+}
+
+.rss1 .RSS_item .RSS_pubDate
+{
+    background-color:#f7f7f7;
+    color:#666;
+    font-size:.7em;
+    font-style:italic;
+       
+}
+
+.rss1 .RSS_item .RSS_description
+{
+   font-size:.8em;
+   margin-left:5px;
+   margin-right:5px;
+   margin-bottom:10px; 
+   padding-bottom:10px; 
+   border-bottom:solid 1px #ccc;  
+   line-height:1.2em;
+    
+}
+
+.rss1 .RSS_item:hover, .rss1 .RSS_item:hover h3,  .rss1 .RSS_item:hover a,
+.rss1 .RSS_item:hover .RSS_pubDate,  .rss1 .RSS_item:hover .RSS_description
+{
+    background-color:#fff !important;
+}
+
+.rss1 .RSS_item:hover .RSS_description
+{
+     
+   border-bottom:solid 1px #fff;  
+}
+.rss1 .RSS_item:hover
+{
+    border-left:solid 6px #E17000;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+
+
+
+
+.RSS_Basic
+{
+    width:80%;
+    height:300px !important;
+    overflow-y:scroll;
+    border:solid 1px #ddd;
+    margin: 5%;
+    padding:5%;
+}
+
+.RSS_Medium
+{
+    width:100% !important;
+    height:300px !important;
+    overflow-y:scroll;
+}
+
+
+.RSS_Fancy
+{
+    width:100% !important;
+    height:300px !important;
+    overflow-y:scroll;
+}
+
+
+.RSS_Channel, .RSS_Item
+{
+    width:95% !important;
+}
+
+.RSSPlaceHolder
+{
+    margin:0% !important;
+    padding:5% !important;
+    width:90% !important;
+    font-size:98%;
+    height:50px !important;
+    overflow:hidden !important;
+    
+}
+
+.Fancy
+{
+    border:dashed 3px #f00;
+    background-color:#caa;
+}
+
+.Medium
+{
+    border:dashed 3px #252;
+    background-color:#aca;
+}
+
+
+.Basic
+{
+    border:dashed 3px #555;
+    background-color:#aaa;
+}
+
+
+/*----------------------------------------------
+RSS BASIC SPECIFIC
+------------------------------------------------*/
+
+
+.RSS_Basic .RSS_Channel
+{
+    margin:0% !important;
+    padding:2% !important;
+    background-color:#ccc;
+    border:solid 1px #777;
+    height:auto !important;
+}
+
+.RSS_Basic .RSS_ChannelTitle
+{
+    margin:0%;
+    padding:0%;
+    color:#232323;
+    font-size:105%;
+}
+
+.RSS_Basic .RSS_ChannelDescription
+{
+    margin:0%;
+    padding:0%;
+    color:#555;
+    font-size:75%;
+}
+
+.RSS_Basic .RSS_Item h2
+{
+    background-color:#fff;
+    color:#000;
+   border:0px;
+   font-size:80%;
+}
+
+.RSS_Basic .RSS_Item
+{
+    border:0px !important;
+    background-color:#fff !important;
+    border-bottom:solid 1px #dfdfdf !important;
+    padding:1% !important;
+    margin:0%;
+    position:relative;
+    clear:both;
+    height:auto !important;
+}
+
+.RSS_Basic .RSS_Item a
+{
+    text-decoration:none;
+    
+}
+
+.RSS_Basic .RSS_Description, .RSS_Basic .RSS_Description_Wide
+{
+    display:none;
+     margin:0%;
+    padding:0%;
+}
+
+
+
+/*----------------------------------------------
+RSS MEDIUM SPECIFIC
+------------------------------------------------*/
+.RSS_Medium .RSS_Channel
+{
+    margin:0% !important;
+    padding:2% !important;
+    background-color:#efefef;
+    border:solid 1px #333;
+    height:auto !important;
+}
+
+.RSS_Medium .RSS_ChannelTitle
+{
+    margin:0%;
+    padding:0%;
+    color:#343455;
+    font-size:110%;
+}
+
+.RSS_Medium .RSS_ChannelDescription
+{
+    margin:0%;
+    padding:0%;
+    color:#345;
+    font-size:80%;
+}
+
+.RSS_Medium .RSS_Item
+{
+    border-top:solid 1px #eaeadd;
+    border-bottom:solid 1px #88a;
+    padding:20px;
+    padding-bottom:40px;
+    margin:0px !important;
+    position:relative;
+    clear:both;
+    height:auto !important;
+}
+
+.RSS_Medium .RSS_Item a
+{
+    text-decoration:none;
+}
+
+.RSS_Medium .RSS_Item h2
+{
+    background-color:inherit;
+    color:#000;
+   padding-top:8px;
+   border:0px;
+   margin-bottom:15px;
+}
+
+.RSS_Medium .RSS_Item .RSS_Image
+{
+   /* position:absolute;
+    top:68px;
+    left:40px;*/
+    
+    margin:20px;
+    margin-top:0px;
+    height:100%;
+    width:250px;
+    position:relative; 
+    float:left;
+}
+
+.RSS_Medium .RSS_Image img
+{
+    
+    border:solid 1px #ccc;
+    padding:10px;
+    box-shadow:2px 2px 8px #ccc;
+    position:absolute;
+    top:78px;
+    left:40px;
+    margin:20px;
+    border:solid 1px #ccc;
+    padding:10px;
+    text-align:center;
+    box-shadow:2px 2px 8px #ccc;
+}
+
+.RSS_Medium .RSS_Description, .RSS_Medium .RSS_Description_Wide
+{
+    font-size:12pt;
+    font-family:Helvetica, Sans-Serif;
+    color:#000;
+    background-color:#efefef;
+    padding:20px;
+    margin-left:300px;
+    border:solid 2px #69a;
+    line-height:1.25em;
+    text-align:justify;
+    box-shadow:5px 5px 15px #ccc;
+}
+
+.RSS_Medium .RSS_Description p, .RSS_Medium .RSS_Description_Wide p
+{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.RSS_Medium .RSS_Description_Wide
+{
+   width:94%;
+   margin-left:10px;
+}
+
+/*----------------------------------------------
+RSS FANCY SPECIFIC
+------------------------------------------------*/
+.RSS_Fancy .RSS_Item
+{
+    border-bottom:solid 1px #dfdfdf;
+    padding:20px;
+    padding-top:5px;
+    margin:2px;
+    margin-top:1px !important;
+    padding-top:1px !important;
+    margin-bottom:20px;
+    position:relative;
+    clear:both;
+    height:auto !important;
+}
+
+.RSS_Fancy .RSS_Item a
+{
+    text-decoration:none;
+}
+
+.RSS_Fancy .RSS_Title h2
+{
+    color:#036;
+    padding:0%;
+    padding-left:5%;
+    margin:0%;
+}
+
+.RSS_Fancy .RSS_Title
+{
+    position:relative;
+    margin:0% !important;
+    padding:0% !important;
+    width:100%;
+}
+
+.RSS_Fancy .RSS_Content
+{
+    position:relative;
+    margin:0px !important;
+    padding:0px !important;
+    width:100%;
+}
+
+.RSS_Fancy .RSS_Image
+{
+    margin:1% !important;
+    padding:0%;
+    height:auto;
+    width:20% !important;
+    float:left !important;
+}
+
+.RSS_Fancy .RSS_Image img
+{
+    border:solid 1px #ccc;
+    padding:0%;
+    margin:0%;
+    text-align:center;
+    box-shadow:2px 2px 8px #ccc;
+}
+
+.RSS_Fancy .RSS_Description, .RSS_Fancy .RSS_Description_Wide
+{
+    float:left;
+    font-size:95%;
+    font-family:Helvetica, Sans-Serif;
+    color:#000;
+    background-color:#fcfcfa;
+    padding:3% !important;
+    margin:2% !important;
+    margin-right:1% !important;
+    margin-top:3% !important;
+    width:67% !important;  
+    height:auto;  
+    border:solid 2px #cecece;
+    border-left:solid 1px #efefef;
+    border-top:solid 1px #efefef;
+    line-height:1.25em;
+    text-align:justify;
+    box-shadow:5px 5px 8px #ccc;
+}
+
+.RSS_Fancy .RSS_Description_Wide
+{
+    margin:1% !important;
+    padding:3% !important;
+    width:90% !important;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++                          END OF STANDARD STYLES YOU ARE                             +
++     FREE TO OVERRIDE STYLES BEYOND THIS POINT                                       +
++     PLEASE MAINTAIN YOUR SITE NAVIGATION SECTION                                    +
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+.TheHomePage .RSS_Fancy
+{
+   height:auto !important;
+   overflow:auto;
+   margin:0px !important;
+   padding:0px !important;
+}
+
+.TheHomePage .RSS_Fancy .RSS_Item
+{
+   border-bottom:solid 1px #dfdfdf;
+    padding:2%;
+    margin:2px;
+    margin-bottom:5%;
+    position:relative;
+    clear:both;
+    height:auto !important;
+}
+
+.TheHomePage .RSS_Fancy .RSS_Channel p
+{
+    background-color:#036;
+    color:#fff !important;
+    padding:5px;
+    margin:0px;
+    font-size:110% !important;
+    border-bottom:solid 1px #ddd;
+}
+
+.TheHomePage .RSS_Fancy .RSS_Channel .RSS_ChannelDescription
+{
+    border-top:solid 1px #aaa;
+    background-color:#ddd;
+    color:#036 !important;
+    font-weight:bold;
+    padding:5px;
+    text-indent:15px;
+    margin:0px;
+    font-size:85% !important;
+}
+
+.TheHomePage .RSS_Fancy .RSS_Image
+{
+   padding:0px !important;
+   background-color:#fff;
+}
+
+.TheHomePage .RSS_Fancy .RSS_Image img
+{
+    height:120px !important;
+    width:auto !important;
+    margin:0px !important;
+    padding:0px !important;
+    border-right:solid 1px #888 !important;
+    border-bottom:solid 1px #888 !important;
+    text-align:center;
+    box-shadow:2px 2px 8px #555 !important;
+}
+
+
+.TheHomePage .RSS_Fancy .RSS_Description, .TheHomePage .RSS_Fancy .RSS_Description_Wide
+{
+  min-height:10%;
+}
