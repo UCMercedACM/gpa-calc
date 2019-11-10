@@ -1,4 +1,5 @@
 import GameBoard from "./game-board";
+
 (function(window) {
   let _init = params => {
     GameBoard.generate(params);

@@ -1,9 +1,11 @@
 import GameBoard from "./game-board";
+
 class Winner {
   constructor() {
     this._name = null;
     this._score = 0;
   }
+
   findWinner() {
     const inputLines = GameBoard.inputArray;
     const winningLines = [
@@ -16,9 +18,10 @@ class Winner {
       [0, 4, 8],
       [2, 4, 6]
     ];
+
     for (let i = 0; i < winningLines.length; i++) {
       const [a, b, c] = winningLines[i];
-      // console.log(inputLines);
+
       if (
         inputLines[a] !== undefined &&
         inputLines[a] === inputLines[b] &&
@@ -29,8 +32,10 @@ class Winner {
         return { state: inputLines[a], lines: [a, b, c] };
       }
     }
+
     return { state: null, lines: [] };
   }
+
   calculateScore(inputLines, player) {
     for (let i = 0; i < inputLines.length; i++) {
       if (inputLines[i] == player) {
@@ -38,11 +43,14 @@ class Winner {
       }
     }
   }
+
   get name() {
     return this._name;
   }
+
   get score() {
     return this._score;
   }
 }
+
 export default Winner;

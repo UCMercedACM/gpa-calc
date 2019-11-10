@@ -1,4 +1,5 @@
 import GameBoard from "./game-board";
+
 const ScoreBoard = {
   drawScore: () => {
     const table = GameBoard.table;
@@ -6,8 +7,10 @@ const ScoreBoard = {
     GameBoard.table.style.opacity = "0.5";
     const cells = table.getElementsByTagName("td");
     let cellIndex;
+
     for (let c = 0; c < cells.length; c++) {
       cellIndex = parseInt(cells[c].getAttribute("index"));
+
       if (
         GameBoard.inputArray[cellIndex] == winner.state &&
         winner.lines.indexOf(cellIndex) != -1
@@ -32,4 +35,5 @@ const ScoreBoard = {
     document.body.appendChild(scoreboard);
   }
 };
+
 export default ScoreBoard;
