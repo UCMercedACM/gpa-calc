@@ -4,20 +4,24 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <script src="game-lib.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <div id="game_container">
-
-  </div>
-  <script type="text/javascript">
-    Game.init({
-      container: "game_container",
-      cellHeight: 100,
-      cellWidth: 100
-    });
-  </script>
+  <!--- Email via a button
+  <p>
+    <a href="mailto:foobar@ucm.edu?Subject=This%20is%20a%20Test" target="_blank">
+      <button type="button">Email</button>
+    </a>
+  </p>
+  -->
+  
+  <p> <!---Email via a form-->
+    <form action="mailto:foobar@ucm.edu?Subject=This%20is%20a%20Test" target="_blank" method="POST">
+      Email: <br>
+      <input type="text" name="email" value="">
+      <input type="submit" value="Submit">
+    </form>
+  </p>
 </body>
 
 </html>
