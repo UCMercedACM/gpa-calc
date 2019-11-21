@@ -14,14 +14,27 @@
     </a>
   </p>
   -->
-  
-  <p> <!---Email via a form-->
-    <form action="mailto:foobar@ucm.edu?Subject=This%20is%20a%20Test" target="_blank" method="POST">
-      Email: <br>
-      <input type="text" name="email" value="">
-      <input type="submit" value="Submit">
-    </form>
-  </p>
+  <div><!---Email via a form-->
+    <p>
+      <form action="mailto:foobar@ucmerced.edu?Subject=This%20is%20a%20Test" target="_blank" method="POST">
+        Email: <br>
+        <input type="text" name="email" value="">
+        <input type="submit" value="Submit">
+      </form>
+    </p>
+  </div>
+
+  <div> <!--Button for GPA, Currently generates random number between 0.10-5.00-->
+    <button onclick="random()">GPA</button>
+    <p id="rand"></p>
+  </div>
+
+  <script>
+    function random(){
+      var x = document.getElementById("rand");
+      x.innerHTML = Math.floor(Math.random() * 500 + 1)/100;
+    }
+  </script>
 </body>
 
 </html>
