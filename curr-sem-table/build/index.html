@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chartype = "UTF-8">
+        <title>GPA calculator</title>
+        <link rel="stylesheet" type="text/css"
+        href="style.css">
+        <script src = "functions.js"></script>
+    </head>
+    <body>
+        <h1>GPA Calculator</h1>
+        <center>
+            <table id = "middleTable" style="width:50%">
+                <tr>
+                  <th>COURSE</th>
+                  <th>UNITS</th>
+                  <th>GRADE</th>
+                  <th>GRADEPOINTS</th>
+                </tr>
+                <tr>
+                  <td>Calculus</td>
+                  <td>4</td>
+                  <td>50</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>History</td>
+                  <td>4</td>
+                  <td>94</td>
+                  <td>50</td>
+                </tr>
+              </table> 
+              <button type="button" onclick="appendRow()">More classes</button>
+              <button type="button" onclick="deleteRow()">delete a row</button>
+
+        </center>
+        
+    </body>
+</html>
