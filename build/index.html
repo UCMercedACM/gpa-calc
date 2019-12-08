@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 
 <html>
+   <head>
+       <meta chartype = "UTF-8">
+       <title>GPA calculator</title>
+        <link rel="stylesheet" type="text/css"
+       href="border.css">
+       <script src = "rows.js"></script>
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,10 +34,23 @@
     }
   </style>
 </head>
+   </head>
+   <body>
+       <h1>GPA Calculator</h1>
+       <center>
+           <table id = "middleTable" style="width:50%">
+               <tr>
+                 <th>COURSE</th>
+                 <th>UNITS</th>
+                 <th>GRADE</th>
+                 <th>INCLUDE</th>
+                 <th>GRADEPOINTS</th>
+               </tr>
 
 <body>
   <h2>GPA Calculator</h2>
   <p></p>
+               <tr>
 
   <div class="footer">
     <div class="row">
@@ -59,5 +78,37 @@
   </div>
 
 </body>
+                 <td>
+                   <form action="/action_page.php">
+                    <input type="text" name="course"> <br>
+                 </td>
 
+                 <td>
+                   <form action="/action_page.php">
+                    <input type="text" name="units"> <br>
+                 </td>
+
+                 <td>
+                   <form action="/action_page.php">
+                    <input type="text" name="grade"> <br>
+                 </td>
+
+                 <td>
+                   <form action="/action_page.php">
+                    <input type="checkbox" id="check" value="1">
+                  </form>
+                 </td>
+
+                 <td>
+                   <form action="/action_page.php">
+                    <input type="text" name="gradepoints"> <br>
+                 </td>
+
+               </tr>
+
+             </table>
+       </center>
+       <button type="button" onclick="appendRow()">Add Course</button>
+       <button type="button" onclick="deleterow()">Remove Course</button>
+   </body>
 </html>
