@@ -8,23 +8,6 @@
 </head>
 
 <body>
-  <!--- Email via a button
-  <p>
-    <a href="mailto:foobar@ucm.edu?Subject=This%20is%20a%20Test" target="_blank">
-      <button type="button">Email</button>
-    </a>
-  </p>
-  -->
-  <div><!---Email via a form-->
-    <p>
-      <form action="mailto:foobar@ucm.edu?Subject=This%20is%20a%20Test" target="_blank" method="POST">
-        Email: <br>
-        <input type="text" name="email" value="">
-        <input type="submit" value="Submit">
-      </form>
-    </p>
-  </div>
-
   <div> <!--Button for GPA, Currently generates random number between 0.10-5.00-->
     <button onclick="random()">GPA</button>
     <p id="rand"></p>
