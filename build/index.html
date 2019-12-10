@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <script src="game-lib.js" type="text/javascript"></script>
-</head>
-
-<body>
-  <div> <!--Button for GPA, Currently generates random number between 0.10-5.00-->
-    <button onclick="random()">GPA</button>
-    <p id="rand"></p>
-  </div>
-
-  <script>
-    function random(){
-      var x = document.getElementById("rand");
-      x.innerHTML = Math.floor(Math.random() * 400 + 1)/100;
-    }
-  </script>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="game-lib.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <form id="tble">
+      <table border="1">
+        <tr>
+          <td>Total units attempted</td>
+          <td>Total grade points</td>
+        </tr>
+          <td><input type="number" id="totalUA"></td>
+          <td><input type="number" id="totalGP"></td>
+        <tr>
+        </tr>
+      </table>
+    </form>  
+    <div>
+      <button onclick="calculateGPA()">calculate GPA</button>
+      <p id="GPA"></p>
+    </div>  
+    <form id="tble">
+      <table border="1">
+        <tr>
+          <td>Current GPA</td>
+          <td>Current units attempted</td>
+          <td>Future units attempted (not total)</td>
+          <td>Future grade points (not total)</td>
+        </tr>
+          <td><input type="number" id="currentGPA"></td>
+          <td><input type="number" id="currentUA"></td>
+          <td><input type="number" id="futureUA"></td>
+          <td><input type="number" id="futureGP"></td>
+        <tr>
+        </tr>
+      </table>
+    </form>  
+    <div>
+      <button onclick="futureGPA()">Calculate Future GPA</button>
+      <p id="futureGPA"></p>
+    </div>  
+    <script>
+      function calculateGPA() {
+        var totalUA = document.getElementById("totalUA");
+        var totalGP = document.getElementById("totalGP");
+        var gpa = document.getElementById("GPA");      
+        gpa.innerHTML = (totalGP.value / totalUA.value).toFixed(3);
+      }
+      function futureGPA() {
+        var currentGPA = document.getElementById("currentGPA");
+        var currentUA = document.getElementById("currentUA");
+        var futureUA = document.getElementById("futureUA");
+        var futureGP = document.getElementById("futureGP");
+        var futureGPA = document.getElementById("futureGPA");      
+        futureGPA.innerHTML = (((currentGPA.value * currentUA.value) + Number(futureGP.value)) / (Number(currentUA.value) + Number(futureUA.value))).toFixed(3);
+      }
+    </script>
+  </body>
 </html>
